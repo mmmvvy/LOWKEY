@@ -53,3 +53,13 @@ let intervalo = setInterval(() => {
     }
 
 }, 1000);
+
+// FAQ
+
+const preguntas = document.querySelectorAll('.faq-pregunta');
+
+preguntas.forEach(pregunta => {
+    pregunta.addEventListener('click', () => {
+        pregunta.parentElement.classList.toggle('activo');
+    });
+});

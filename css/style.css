@@ -618,6 +618,238 @@ nav > div > .hamburger {
     transform: scale(1.08);
 }
 
+/* ABONOS */
+
+#abonos {
+    padding-top: 50px;
+}
+
+#abonos div {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+#abonos div img {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 37%;
+}
+
+#abonos div h1 {
+    font-size: 330px;
+    position: relative;
+}
+
+#abonos div div {
+    font-size: 45px;
+    z-index: 9998;  
+    position: absolute; 
+    top: 74%;
+}
+
+#abonos div div a {
+    color: var(--sc-color);
+    text-decoration: none;
+    font-family: evogria;
+    padding: 20px 30px;
+    border: solid 1px var(--sc-color);
+}
+
+#abonos div div a:hover {
+    border: 1px solid var(--acc-color);
+    color: var(--pr-color);
+    background-color: var(--acc-color);
+    transition: var(--transition);
+}
+
+#abonos-cards {
+    padding: 40px 0;
+}
+
+#abonos-cards .ab-abonos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.abono-card {
+    background-color: var(--pr-color);
+    border: 1px solid var(--sc-color);
+    border-radius: 35px;
+    padding: 2.5rem 2rem 1.5rem;
+    flex: 1;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-width: 310px;
+}
+
+.abono-card-header h2 {
+    font-family: thunder;
+    font-size: 115px;
+    line-height: 0.97;
+    color: var(--sc-color);
+}
+
+.abono-card-texto {
+    list-style: none;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.abono-card-texto li {
+    color: var(--sc-color);
+    padding: 0.2rem;
+    font-family: satoshi light;
+}
+
+.abono-card-texto li em {
+    font-family: satoshi medium italic;
+}
+
+.abono-card-boton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 10px 0 0 0;
+    margin-top: auto;
+}
+
+.abono-card-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    border: 1px solid var(--sc-color);
+    background: transparent;
+    color: var(--sc-color);
+    font-size: 42px;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--tittle-font);
+    font-weight: var(--tittle-weigh);
+}
+
+.abono-card-btn:hover {
+    border: 1px solid var(--acc-color);
+    color: var(--pr-color);
+    background-color: var(--acc-color);
+    transition: var(--transition);
+}
+
+.abono-card-disclaimer {
+    color: var(--sc-color);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.abono-card {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--pr-color);
+    border: 1px solid var(--sc-color);
+    border-radius: 35px;
+    padding: 2.5rem 2rem 1.5rem;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.overlay-no {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#156d046a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--sc-color);
+    z-index: 10;
+}
+
+.abono-card .overlay-no svg {
+    width: 100px;
+    height: 100px;
+}
+
+.ab-abonos:hover .abono-card {
+    filter: brightness(0.4);
+    transition: var(--transition);
+}
+
+.ab-abonos .abono-card:hover {
+    filter: brightness(0.9) !important;
+    transform: scale(1.05);
+    transition: var(--transition);
+
+}
+
+
+/* FAQ */
+#ab-faq {
+    background-color: var(--pr-color);
+    padding: 60px 20px;
+    max-width: 1800px;
+}
+
+#ab-faq h2 {
+    font-family: var(--tittle-font);
+    font-size: var(--tittle-size-desktop);    color: var(--sc-color);
+    /* border-bottom: 1px solid var(--sc-color); */
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--sc-color);
+    padding: 18px 0;
+}
+
+.faq-pregunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: satoshi light;
+    font-size: 1.2rem;
+    color: var(--sc-color);
+}
+
+.faq-icono {
+    font-size: 1.2rem;
+    color: var(--sc-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-respuesta {
+    display: none;
+    padding-top: 15px;
+}
+
+.faq-respuesta p {
+    font-family: satoshi light;
+    color: var(--sc-color);
+    font-size: 0.95rem;
+}
+
+.faq-item.activo .faq-respuesta {
+    display: block;
+}
+
+.faq-item.activo .faq-icono {
+    transform: rotate(90deg);
+}
 
 /* FOOTER */
 footer {
