@@ -1,3 +1,15 @@
+// NAV
+const hamburger = document.querySelector(".hamburger");
+const navMenuDcha = document.querySelector(".desktop-dcha");
+const navMenuIzq = document.querySelector(".desktop-izq");
+
+hamburger.addEventListener("click", function () {
+    navMenuDcha.classList.toggle("active");
+    navMenuIzq.classList.toggle("active");
+    }
+);
+
+
 // CUENTA ATRÁS DEL HOME
 
 let fecha = new Date(2027, 1, 18, 0, 0);
