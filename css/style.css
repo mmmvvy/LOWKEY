@@ -108,7 +108,7 @@ nav > div > .logo {
     transform: translate(-55px);
 }
 
-nav > div > .logo > img {
+nav > div > .logo > a > img {
     transform: scale(0.75);
 }
 
@@ -230,7 +230,6 @@ nav > div > .hamburger {
     color: #ffffff;
     margin-top: 8px;
 }
-
 
 /* INTRO B */
 
@@ -576,6 +575,49 @@ nav > div > .hamburger {
   }
 }
 
+#horarios {
+    height: calc(100vh + 80px);
+    padding-top: 50px;
+}
+
+#horarios .h-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#horarios .h-info h1{
+    border-bottom: 1px solid var(--sc-color);
+    margin-bottom: 40px;
+}
+
+
+#horarios .h-info .h-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+#horarios .h-info .h-img .marco-img {
+    max-width: 520px;
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+#horarios .h-info .h-img .marco-img img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+#horarios .h-info .h-img:hover .marco-img img {
+    filter: brightness(0.6);
+}
+
+#horarios .h-info .h-img .marco-img:hover img {
+    filter: brightness(1) !important;
+    transform: scale(1.08);
+}
+
 
 /* FOOTER */
 footer {
@@ -731,15 +773,22 @@ footer {
         border: none;
         padding: 0;
         color: var(--pr-color);
-}                 
-    }
-
+    }    
+    
     nav div .desktop-izq li:last-child a:hover{
         -webkit-text-stroke: 1px var(--acc-color);
         transition: var(--transition);
         background-color: var(--pr-color);
         border: 0;
+    }
+
+    /* horarios */
+    #horarios {
+        height: calc(100vh - 80px);
+    }
 
     }
+
+
 
 
