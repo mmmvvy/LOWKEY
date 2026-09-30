@@ -72,7 +72,8 @@ p {
 
 body{
     background-color: var(--pr-color);
-    padding: 0 40px;
+    padding: 0 50px;
+    overflow-x: hidden;
     /* background-image: url(../img/PISCAS.svg);
     background-repeat: repeat;
     background-size:contain; */
@@ -81,7 +82,7 @@ body{
 nav{
     background-color: var(--pr-color);
     display: flex;
-    padding: 1rem 2rem;
+    padding: 1rem 50px;
     position: fixed;
     width: 100%;
     height: 70px;
@@ -91,7 +92,7 @@ nav{
     font-family: var(--tittle-font);
     border-bottom: 0.1px solid var(--sc-color);
     box-shadow: 0px 15px 37px 5px rgba(0, 0, 0, 0.66);
-    margin: 0 -40px;
+    margin: 0 -50px;
     z-index: 9999;
 }
 
@@ -146,10 +147,11 @@ nav > div > .hamburger {
 
 /* HOME */
 #hero div img{
-    height: 100vh;
-    width: calc(100% + 80px);
-    margin-left: -40px;
-    margin-right: -40px;
+    hheight: 100vh;
+    width: calc(100% + 100px);
+    margin-left: -50px;
+    margin-right: -50px;
+    object-fit: cover;
 }
 
 #home-info {
@@ -173,6 +175,7 @@ nav > div > .hamburger {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: calc(100vh - 200px);
 }
 
 #home-info div div .a-img {
@@ -182,23 +185,56 @@ nav > div > .hamburger {
 
 #home-info div div .a-text {
     max-width: 1000px;
+    padding-bottom: 30px;
 }
 
 #home-info div div .a-text p {
     text-align: center;
+    font-size: 1.3rem;
 }
+
+/* CUENTA ATRÁS */
+.a-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.a-counter .grupo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.a-counter .grande {
+    font-family: 'evogria', sans-serif;
+    font-size: 5rem;
+    color: var(--sc-color);
+    letter-spacing: 2px;
+}
+
+.a-counter .chico {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 8px;
+}
+
 
 /* INTRO B */
 
 #home-info .intro-b {
     display: flex;
-    padding: 100px 0 60px 0 ;
-    justify-content: center;
+    padding: 140px 0 60px 0;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
+    width: 100%;
 }
 
 #home-info .intro-b .b-text {
+    flex: 1 1 350px;
     max-width: 500px;
 }
 
@@ -208,6 +244,11 @@ nav > div > .hamburger {
 
 #home-info .intro-b .b-text h1 {
     border-bottom: 1px solid var(--sc-color);
+}
+
+#home-info .intro-b .b-img {
+    flex: 1 1 450px;
+    width: 100%;
 }
 
 #home-info .intro-b .b-img iframe{ 
@@ -221,6 +262,7 @@ nav > div > .hamburger {
 #home-info .intro-c {
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
     align-items: center;
 }
 
@@ -241,7 +283,7 @@ nav > div > .hamburger {
 #home-info .intro-c .c-gallery .c-foto {
     position: relative;
     padding: 0;
-    width: 310px;
+    width: 300px;
     overflow: hidden;
 }
 
@@ -317,6 +359,7 @@ nav > div > .hamburger {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 50px;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -339,7 +382,10 @@ nav > div > .hamburger {
 
 #home-info .intro-d .d-text{
     display: flex;
-    gap: 700px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
 }
 
 #home-info .intro-d .d-text .d-text-a {
@@ -470,23 +516,15 @@ nav > div > .hamburger {
 
 /* MARQUESINA */
 
-.marquesina-contenedor {
-  width: calc(100% + 80px);
-  margin-left: -40px;
-  margin-right: -40px;
-  overflow: hidden;
-  background-color: var(--acc-color);
-  padding: 10px 0;
-  transform: rotate(-1deg);
-}
-
+.marquesina-contenedor,
 .marquesina-contenedor-a {
-  width: calc(100% + 80px);
-  margin-left: -40px;
-  margin-right: -40px;
-  overflow: hidden;
-  background-color: var(--acc-color);
-  padding: 20px 0;
+    width: calc(100% + 100px);
+    margin-left: -50px;
+    margin-right: -50px;
+    overflow: hidden;
+    background-color: var(--acc-color);
+    padding: 10px 0;
+    transform: rotate(-1deg);
 }
 
 .marquesina-pista {
@@ -517,3 +555,98 @@ nav > div > .hamburger {
   }
 }
 
+
+/* FOOTER */
+footer {
+    padding: 100px 0;
+    font-family: satoshi medium;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.footer-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 400px;
+}
+
+.footer-logo {
+    max-width: 350px;
+}
+
+.footer-enlaces {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.footer-enlaces p {
+    padding-top: 0.4rem;
+}
+
+.footer-enlaces a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+    color: var(--acc-color);
+}
+
+.footer-cc {
+    color: var(--sc-color);
+    font-size: 0.85rem;
+}
+
+.footer-dcha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.footer-redes {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-redes a {
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-redes a svg {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-redes a:hover {
+    color: var(--acc-color);
+    transform: scale(1.1);
+}
+
+.footer-creditos {
+    color: #ffffff;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.footer-creditos span {
+    font-weight: bold;
+}
