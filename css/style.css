@@ -25,6 +25,11 @@
 }
 
 @font-face {
+    font-family: satoshi bold;
+    src: url(../fonts/Satoshi-Bold.otf);
+}
+
+@font-face {
     font-family: evogria italic;
     src: url(../fonts/Evogria\ Italic.otf);
 }
@@ -127,11 +132,21 @@ nav div ul li a:hover {
     list-style: none;
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 nav div .desktop-izq li:last-child a{
     border: 1px solid var(--sc-color);
     padding: 10px 18px;
+}
+
+nav div .desktop-izq .cart:last-child a{
+    border: 1px solid var(--sc-color);
+    border-radius: 30%;
+    padding: 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav div .desktop-izq li:last-child a:hover{
@@ -144,6 +159,33 @@ nav div .desktop-izq li:last-child a:hover{
 
 nav > div > .hamburger {
     display: none;
+}
+
+.cart a {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--acc-color);
+    color: var(--pr-color);
+    font-family: 'Satoshi Bold', sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cart-count.visible {
+    transform: scale(1);
 }
 
 /* HOME */
@@ -422,14 +464,14 @@ nav > div > .hamburger {
 
 
 /* SEPARADOR */
-#home-info .separador {
+.separador {
     display: flex;
     gap: 1rem;
-    padding: 150px;
+    padding: 100px;
     justify-content: center;
 }
 
-#home-info .separador img {
+.separador img {
     max-width: 60px;
 }
 
@@ -678,20 +720,6 @@ nav > div > .hamburger {
     flex-wrap: wrap;
 }
 
-.abono-card {
-    background-color: var(--pr-color);
-    border: 1px solid var(--sc-color);
-    border-radius: 35px;
-    padding: 2.5rem 2rem 1.5rem;
-    flex: 1;
-    max-width: 340px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    min-width: 310px;
-}
-
 .abono-card-header h2 {
     font-family: thunder;
     font-size: 115px;
@@ -794,7 +822,6 @@ nav > div > .hamburger {
     filter: brightness(0.9) !important;
     transform: scale(1.05);
     transition: var(--transition);
-
 }
 
 
@@ -804,6 +831,15 @@ nav > div > .hamburger {
     padding: 60px 20px;
     max-width: 1800px;
 }
+
+#ab-faq-b{
+    padding-top: 50px;
+}
+
+#ab-faq-b h1 {
+    color: var(--sc-color);
+}
+
 
 #ab-faq h2 {
     font-family: var(--tittle-font);
@@ -850,6 +886,205 @@ nav > div > .hamburger {
 .faq-item.activo .faq-icono {
     transform: rotate(90deg);
 }
+
+
+/* PLANOS */
+#planos {
+    height: calc(100vh + 80px);
+    padding-top: 50px;
+}
+
+#planos div {
+    display: flex;
+    flex-direction: column;
+}
+
+#planos div h1 {
+    width: 100%;
+    border-bottom: 1px solid var(--sc-color);
+}
+
+#planos div div {
+    padding: 30px 0 10px 0;
+}
+
+/* COMPRAR */
+
+.h1-comprar {
+    width: 100%;
+    padding-top: 50px;
+    border-bottom: 1px solid var(--sc-color);
+}
+
+#comprar {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pr-color);
+    flex-direction: column;
+    gap: 60px;
+}
+
+#comprar-b {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pr-color);
+    flex-direction: column;
+    gap: 60px;
+}
+
+.c-contenedor {
+    background-color: #000;
+    border: 1px solid var(--sc-color);
+    border-radius: 30px;
+    padding: 2.5rem;
+    max-width: 1050px;
+    width: 100%;
+    display: flex;
+    gap: 2.5rem;
+    transition: 0.3s ease;
+}
+
+#comprar-b .c-contenedor-b{
+    background-color: #000;
+    border: 1px solid var(--sc-color);
+    border-radius: 30px;
+    padding: 2.5rem;
+    max-width: 1050px;
+    width: 100%;
+    display: flex;
+    gap: 2.5rem;
+    transition: 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.c-contenedor:hover {
+    filter: brightness(0.9) !important;
+    transform: scale(1.05);
+}
+
+#comprar-b .c-contenedor-b:hover {
+    filter: brightness(0.9) !important;
+    transform: scale(1.05);
+}
+
+.c-img {
+    flex: 0 0 320px;
+    display: flex;
+}
+
+.c-info {
+    display: flex;
+    flex-direction: column;
+    color: var(--sc-color);
+}
+
+.c-header img {
+    max-width: 250px;
+}
+
+.c-header h3 {
+    font-size: 1.1rem;
+    font-family: Satoshi Bold;
+    padding: 10px 0 2px 0;
+}
+
+.c-header .c-fecha {
+    font-family: Satoshi Bold;
+    font-size: 1.1rem;
+    margin: 0 0 20px 0;
+}
+
+.c-tickets {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 20px 0;
+}
+
+.c-ticket-top {
+    display: flex;
+    font-family: satoshi bold;
+    padding-bottom: 6px;
+    justify-content: space-between;
+}
+
+.c-ticket-top .c-ticket-nombre span {
+    color:#d71904;
+    font-size: 1.2rem;
+}
+
+
+.c-ticket-desc {
+    font-family: satoshi light;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    opacity: 0.8;
+}
+
+.c-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 40px;
+}
+
+.c-dice {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.c-dice span {
+    font-family: satoshi light;
+    font-size: 0.8rem;
+}
+
+.c-dice img {
+    height: 60px;
+    width: auto;
+}
+
+.c-btn-comprar {
+    padding: 12px 45px;
+    border: 1px solid var(--sc-color);
+    color: var(--sc-color);
+    font-family: evogria;
+    font-weight: var(--tittle-weigh);
+    font-size: 45px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.c-btn-comprar:hover {
+    border-color: var(--acc-color);
+    color: var(--pr-color);
+    background-color: var(--acc-color);
+}
+
+#comprar-b .c-contenedor-b .overlay-no-b{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#156d046a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--sc-color);
+    z-index: 10;
+}
+
+#comprar-b .c-contenedor-b .overlay-no-b svg {
+    width: 60px;
+    height: 60px;
+}
+
 
 /* FOOTER */
 footer {
@@ -1019,7 +1254,17 @@ footer {
         height: calc(100vh - 80px);
     }
 
+    /* comprar */
+    .c-contenedor {
+        flex-direction: column;
     }
+    
+    .c-img {
+        display: none;
+    }
+}
+
+    
 
 
 

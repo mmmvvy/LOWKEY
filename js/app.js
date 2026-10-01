@@ -63,3 +63,28 @@ preguntas.forEach(pregunta => {
         pregunta.parentElement.classList.toggle('activo');
     });
 });
+
+let contadorCarrito = 0;
+
+const botonesAnadir = document.querySelectorAll('.c-btn-comprar');
+const globito = document.querySelector('.cart-count');
+
+if (botonesAnadir.length > 0 && globito) {
+    botonesAnadir.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            contadorCarrito++;
+            globito.textContent = contadorCarrito;
+            
+            if (!globito.classList.contains('visible')) {
+                globito.classList.add('visible');
+            }
+
+            globito.style.transform = 'scale(1.3)';
+            setTimeout(() => {
+                globito.style.transform = 'scale(1)';
+            }, 150);
+        });
+    });
+}
