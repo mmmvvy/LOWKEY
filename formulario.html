@@ -76,70 +76,70 @@
                 </div>
         </div>
 
-       <!-- resumen de compra -->
-        <section id="facturacion">
-            <div class="f-contenedor">
-                <h1 class="f-titulo">FACTURACIÓN</h1>
-
-                <div class="f-resumen">
-                    <h2 class="f-subtitulo">RESUMEN DE COMPRA</h2>
-                    
-                    <div class="f-tabla-cabecera">
-                        <span>producto</span>
-                        <div class="f-grupo-valores">
-                            <span>precio</span>
-                            <span>cantidad</span>
-                            <span>subtotal</span>
-                        </div>
-                    </div>
-
-                    <div class="f-tabla-fila">
-                        <span>ABONO GENERAL - EARLY BIRD - PROMO II</span>
-                        <div class="f-coste">
-                            <span>48,50€</span>
-                            <div class="f-counter">
-                                <button class="f-btn-count" onclick="restar()">-</button>
-                                <span class="f-cant">1</span>
-                                <button class="f-btn-count" onclick="sumar()">+</button>
-                            </div>
-                            <span class="f-prod-subtotal">48,50€</span>
-                        </div>
-                    </div>
-
-                    <div class="f-tabla-cabecera">
-                        <div class="f-grupo-valores">
-                            <span class="f-col-subtotal">subtotal</span>
-                        </div>
-                    </div>
-
-                    <div class="f-desglose">
-                        <div class="f-fila-desglose">
-                            <span>gastos de gestión</span>
-                            <span>entrada</span>
-                        </div>
-                        <div class="f-fila-valores">
-                            <span>48,50€</span>
-                            <span>2€</span>
-                        </div>
-                    </div>
-
-                    <div class="f-tabla-cabecera">
-                        <div class="f-grupo-valores">
-                            <span class="f-col-subtotal">total</span>
-                        </div>
-                    </div>
-
-                    <div class="f-total">
-                        <p>50,50€</p>
-                    </div>
-
-                    <div class="f-boton">
-                        <a href="formulario.html">CONTINUAR</a>
-                    </div>
+       <form id="f-form">
+        <div class="form-contenedor">
+            <h2>DATOS DEL COMPRADOR</h2>
+            
+            <div class="f-fila">
+                <div>
+                    <label for="nombre">nombre<span>*</span></label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div>
+                    <label for="apellidos">apellidos<span>*</span></label>
+                    <input type="text" id="apellidos" required>
                 </div>
             </div>
-        </section>
 
+            <div class="f-fila">
+                <div>
+                    <label for="email">email<span>*</span></label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="confirmar-email">confirmar email<span>*</span></label>
+                    <input type="email" id="confirmar-email" required>
+                </div>
+            </div>
+
+            <div class="f-campo-medio">
+                <label for="dni">NIE/DNI<span>*</span></label>
+                <input type="text" id="dni" required>
+            </div>
+
+            <h2>MÉTODO DE PAGO</h2>
+
+            <div class="f-campo-medio">
+                <label for="titular">nombre del titular<span>*</span></label>
+                <input type="text" id="titular" required>
+            </div>
+
+            <div class="f-campo-medio">
+                <label for="tarjeta">nº tarjeta bancaria<span>*</span></label>
+                <input type="text" id="tarjeta" required>
+            </div>
+
+            <div class="f-fila-pago">
+                <div>
+                    <label for="expiracion">expiración<span>*</span></label>
+                    <input type="text" id="expiracion" required>
+                </div>
+                <div>
+                    <label for="cvv">CVV<span>*</span></label>
+                    <input type="text" id="cvv" required>
+                </div>
+            </div>
+
+            <div class="f-checkbox">
+                <input type="checkbox" id="terminos" required>
+                <label for="terminos">
+                    Acepto los <a href="#">términos y condiciones</a>, y consiento el uso de mis datos para los fines indicados en la <a href="#">política de privacidad</a> del organizador del evento.
+                </label>
+            </div>
+
+            <button type="submit">FINALIZAR COMPRA</button>
+            </div>
+        </form>
         <!-- marquesina -->
        <div class="marquesina-contenedor-b">
             <div class="marquesina-pista">

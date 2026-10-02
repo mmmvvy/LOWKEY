@@ -64,6 +64,7 @@ preguntas.forEach(pregunta => {
     });
 });
 
+// CARRITO
 let contadorCarrito = 0;
 
 const botonesAnadir = document.querySelectorAll('.c-btn-comprar');
@@ -87,4 +88,27 @@ if (botonesAnadir.length > 0 && globito) {
             }, 150);
         });
     });
+}
+
+
+// SUMA Y RESTA 
+let n = 1;
+
+function sumar() {
+    n++;
+    cambiar();
+}
+
+function restar() {
+    if (n > 1) {
+        n--;
+        cambiar();
+    }
+}
+
+function cambiar() {
+    document.querySelector('.f-cant').textContent = n;
+    document.querySelector('.f-prod-subtotal').textContent = (n * 48.5) + '€';
+    document.querySelector('.f-total p').textContent = (n * 50.5) + '€';
+    document.querySelector('.f-total p').textContent = (n * 50.5) + '€';
 }
