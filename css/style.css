@@ -75,6 +75,10 @@ p {
     font-size: 18px;
 }
 
+b {
+    font-family: satoshi bold;
+}
+
 body{
     background-color: var(--pr-color);
     padding: 0 50px;
@@ -230,6 +234,10 @@ nav > div > .hamburger {
     transform: scale(0.50);
 }
 
+#hero div .hero-movil{
+    display: none;
+}
+
 #home-info {
     display: flex;
     flex-direction: column;
@@ -254,7 +262,7 @@ nav > div > .hamburger {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 200px);
     width: 100%;
     /* padding: 40px 0; */
 }
@@ -306,7 +314,7 @@ nav > div > .hamburger {
 
 #home-info .intro-b {
     display: flex;
-    padding: 140px 0 60px 0;
+    padding: 80px 0 60px 0;
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
@@ -608,6 +616,17 @@ nav > div > .hamburger {
 }
 
 .marquesina-contenedor-b {
+    width: calc(100% + 100px);
+    margin-left: -50px;
+    margin-right: -50px;
+    overflow: hidden;
+    background-color: #2cfc10;
+    padding: 10px 0;
+    margin-top: 60px;
+    transform: scaleY(0.8);
+}
+
+.marquesina-contenedor-b-b {
     width: calc(100% + 100px);
     margin-left: -50px;
     margin-right: -50px;
@@ -1517,7 +1536,13 @@ footer {
 }
 
 /* media query */
+
+/* tablet */
 @media screen and (max-width: 960px) {
+
+    body {
+        padding: 0 25   px;
+    }
 
     nav {
         padding: 1rem 30px;
@@ -1584,6 +1609,15 @@ footer {
         border: 0;
     }
 
+    /* home */
+    #hero div .piscas2, .piscas3{
+        display: none;
+    }
+
+    #hero div img {
+        top:55px;
+    }
+
     /* horarios */
     #horarios {
         height: calc(100vh - 80px);
@@ -1597,10 +1631,175 @@ footer {
     .c-img {
         display: none;
     }
+
+    /* abono */
+    #abonos {
+        display: none;
+    }
+
+    #abonos-cards .ab-abonos {
+        flex-direction: row;
+    }
+
+    /* facturacion */
+
+    #facturacion {
+        padding: 40px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .f-contenedor {
+        width: 100%;
+    }
+
+    .f-titulo {
+        font-size: 50px;
+    }
+
+    .f-grupo-valores,
+    .f-tabla-fila .f-coste {
+        gap: 40px;
+    }
+
 }
 
-    
 
+
+/* movil */
+@media only screen and (max-width: 436px) {
+
+    body {
+        padding: 0 15px;
+    }
+
+    /* nav */
+    .desktop-dcha li a,
+    .desktop-izq li a {
+        font-size: 70px;
+        font-family: evogria;
+        line-height: 0.60;
+    }
+
+    nav div .desktop-izq .cart:last-child a {
+    border: 1px solid var(--sc-color);
+    color: var(--sc-color);
+    }
+
+
+    nav div .desktop-izq .cart:last-child a:hover {
+    border: 1px solid var(--acc-color);
+    color: var(--acc-color);
+    }
+
+    .desktop-izq {
+        top: calc(70px + 270px); 
+    }
+
+    /* home */
+    #hero{
+        display: none;
+    }
+
+    .marquesina-contenedor-b-b {
+        display: none;
+    }
+
+    .intro-b {
+        flex-direction: column;
+    }   
+
+    #home-info .intro-b .b-text {
+        flex: none;
+    }
+
+    .a-counter {
+        display: none;
+    }
+
+    #home-info .intro-c {
+        display: none;
+    }
+
+    /* horarios */
+
+    #horarios {
+        height: calc(100vh + 500px);
+    }
+
+    #horarios .h-info .h-img {
+        flex-direction: column;
+    }
+
+    /* planos */
+
+    #planos {
+        height: 50vh;
+    }
+
+    /* comprar */
+    .c-footer {
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .c-dice {
+        display: none;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+    }
+
+    .footer-dcha {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    #facturacion {
+        padding: 30px 15px;
+    }
+
+    .f-titulo {
+        font-size: 36px;
+    }
+
+    .f-subtitulo {
+        padding: 30px 0 10px 0;
+    }
+
+    .f-tabla-cabecera {
+        display: none;
+    }
+    
+    .f-tabla-fila {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .f-tabla-fila .f-coste {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .f-desglose {
+        padding: 15px;
+    }
+
+    .f-total p {
+        font-size: 1.6rem;
+    }
+
+    .f-boton {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+}
 
 
 
