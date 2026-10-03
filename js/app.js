@@ -91,7 +91,7 @@ if (botonesAnadir.length > 0 && globito) {
 }
 
 
-// SUMA Y RESTA 
+// SUMA Y RESTA FORMULARIO
 let n = 1;
 
 function sumar() {

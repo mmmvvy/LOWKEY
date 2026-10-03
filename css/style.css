@@ -189,17 +189,45 @@ nav > div > .hamburger {
     transform: scale(1);
 }
 
-/* HOME */
-/* #hero {
-    margin-top: 10px;
-} */
+#hero div .hero-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh- 3000px);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
 
-#hero div img{
-    height: calc(100vh - 60px);
-    width: calc(100% + 100px);
-    margin-left: -50px;
-    margin-right: -50px;
+#hero div video {
     object-fit: cover;
+    filter: saturate(150%);
+    position: relative;
+    transform: scale(1.6);
+    width: 100%;
+    height: 100%;
+}
+
+#hero div img {
+    position: absolute;
+    transform: scale(0.70);
+    top: 10px;
+    right: 1%;
+}
+
+#hero div .piscas3{
+    position: absolute;
+    top: -1370px;
+    left: 45%;
+    transform: scale(0.50) scaleX(-1);
+}
+
+
+#hero div .piscas2{
+    position: absolute;
+    top: -1370px;
+    right:45%;
+    transform: scale(0.50);
 }
 
 #home-info {
@@ -209,7 +237,7 @@ nav > div > .hamburger {
 }
 
 #home-info .intro {
-    padding: 30px 0;
+    /* padding: 30px 0; */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -906,15 +934,17 @@ max-height: 0;
 #planos div {
     display: flex;
     flex-direction: column;
+    justify-self: center;
 }
 
-#planos div h1 {
+#planos  h1 {
     width: 100%;
     border-bottom: 1px solid var(--sc-color);
 }
 
 #planos div div {
     padding: 30px 0 10px 0;
+    max-width: 1000px;
 }
 
 /* COMPRAR */
@@ -1095,6 +1125,7 @@ max-height: 0;
 }
 
 /* RESUMEN DE COMPRA */
+
 #facturacion {
     background-color: #000;
     color: var(--sc-color);
@@ -1146,7 +1177,6 @@ max-height: 0;
     gap: 80px;
 }
 
-
 .f-grupo-valores {
     gap: 100px;
     display: flex;
@@ -1186,9 +1216,9 @@ max-height: 0;
 }
 
 .f-btn-count:hover {
-    transform: scale(1.25);          
+    transform: scale(1.25);
     background-color: var(--sc-color);
-    color: var(--pr-color);                  
+    color: var(--pr-color);
 }
 
 .f-desglose {
@@ -1239,10 +1269,9 @@ max-height: 0;
 }
 
 .f-boton:hover {
-    transform: scale(1.1);          
+    transform: scale(1.1);
     background-color: var(--acc-color);
     border: 1px solid var(--acc-color);
-  
 }
 
 .f-boton a {
@@ -1252,35 +1281,33 @@ max-height: 0;
 }
 
 .f-boton a:hover{
-    color: var(--pr-color);   
-
+    color: var(--pr-color);
 }
 
+/* FORMULARIO */
 #f-form {
-    box-sizing: border-box;
-    background-color: var(--pr-color);
     color: var(--sc-color);
-    border: 1px solid #333;
-    padding: 50px;
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 40px auto;
     font-family: satoshi light, sans-serif;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-#f-form * {
-    box-sizing: border-box;
+#f-form .form-contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #f-form h2 {
     font-size: 1.1rem;
     font-family: satoshi bold, sans-serif;
     margin-top: 10px;
-    margin-bottom: 0;
-    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 #f-form .f-fila {
@@ -1293,12 +1320,21 @@ max-height: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
 }
 
 #f-form .f-campo-medio {
     width: calc(50% - 15px);
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
+}
+
+#f-form .segundo {
+    font-size: 1.1rem;
+    font-family: satoshi bold, sans-serif;
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 #f-form .f-fila-pago {
@@ -1307,9 +1343,10 @@ max-height: 0;
 }
 
 #f-form .f-fila-pago > div {
-    width: 120px;
+    width: 140px;
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
 }
 
 #f-form label {
@@ -1329,23 +1366,19 @@ max-height: 0;
     background: transparent;
     border: 1px solid var(--sc-color);
     color: var(--sc-color);
-    padding: 12px 14px;
+    padding: 14px 16px;
     font-size: 0.9rem;
     font-family: inherit;
     outline: none;
-}
-
-#f-form input[type="text"]:focus,
-#f-form input[type="email"]:focus {
-    border-color: #fff;
+    box-sizing: border-box;
 }
 
 #f-form .f-checkbox {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 10px;
-    max-width: 480px;
+    margin-top: 20px;
+    max-width: 500px;
 }
 
 #f-form .f-checkbox input[type="checkbox"] {
@@ -1373,18 +1406,19 @@ max-height: 0;
     background-color: var(--sc-color);
     color: var(--pr-color);
     border: none;
-    padding: 16px 40px;
+    padding: 18px 40px;
     font-size: 2rem;
-    font-family: satoshi bold, sans-serif;
+    font-family: evogria, sans-serif;
     cursor: pointer;
+    margin-top: 25px;
     width: fit-content;
-    margin-top: 10px;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 #f-form button:hover {
-    opacity: 0.9;
     transform: scale(1.01);
+    background-color: var(--acc-color);
+    color: var(--pr-color);
 }
 
 /* FOOTER */

@@ -57,6 +57,13 @@
                         <span>LOWKEY</span>
                         <span>LOWKEY</span>
                         <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
                     </div>
                     <div class="marquesina-bloque">
                         <span>LOWKEY</span>
@@ -72,109 +79,132 @@
                         <span>LOWKEY</span>
                         <span>LOWKEY</span>
                         <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
                     </div>
-                </div>
+            </div>
         </div>
 
-       <form id="f-form">
-        <div class="form-contenedor">
-            <h2>DATOS DEL COMPRADOR</h2>
-            
-            <div class="f-fila">
-                <div>
-                    <label for="nombre">nombre<span>*</span></label>
-                    <input type="text" id="nombre" required>
+        <!-- formulario -->
+        <form id="f-form">
+            <div class="form-contenedor">
+                <h2>DATOS DEL COMPRADOR</h2>
+                
+                <div class="f-fila">
+                    <div>
+                        <label for="nombre">nombre<span>*</span></label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div>
+                        <label for="apellidos">apellidos<span>*</span></label>
+                        <input type="text" id="apellidos" required>
+                    </div>
                 </div>
-                <div>
-                    <label for="apellidos">apellidos<span>*</span></label>
-                    <input type="text" id="apellidos" required>
+
+                <div class="f-fila">
+                    <div>
+                        <label for="email">email<span>*</span></label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="confirmar-email">confirmar email<span>*</span></label>
+                        <input type="email" id="confirmar-email" required>
+                    </div>
                 </div>
-            </div>
 
-            <div class="f-fila">
-                <div>
-                    <label for="email">email<span>*</span></label>
-                    <input type="email" id="email" required>
+                <div class="f-campo-medio">
+                    <label for="dni">NIE/DNI<span>*</span></label>
+                    <input type="text" id="dni" required>
                 </div>
-                <div>
-                    <label for="confirmar-email">confirmar email<span>*</span></label>
-                    <input type="email" id="confirmar-email" required>
+
+                <h2 class="segundo">MÉTODO DE PAGO</h2>
+
+                <div class="f-campo-medio">
+                    <label for="titular">nombre del titular<span>*</span></label>
+                    <input type="text" id="titular" required>
                 </div>
-            </div>
 
-            <div class="f-campo-medio">
-                <label for="dni">NIE/DNI<span>*</span></label>
-                <input type="text" id="dni" required>
-            </div>
-
-            <h2>MÉTODO DE PAGO</h2>
-
-            <div class="f-campo-medio">
-                <label for="titular">nombre del titular<span>*</span></label>
-                <input type="text" id="titular" required>
-            </div>
-
-            <div class="f-campo-medio">
-                <label for="tarjeta">nº tarjeta bancaria<span>*</span></label>
-                <input type="text" id="tarjeta" required>
-            </div>
-
-            <div class="f-fila-pago">
-                <div>
-                    <label for="expiracion">expiración<span>*</span></label>
-                    <input type="text" id="expiracion" required>
+                <div class="f-campo-medio">
+                    <label for="tarjeta">nº tarjeta bancaria<span>*</span></label>
+                    <input type="text" id="tarjeta" required>
                 </div>
-                <div>
-                    <label for="cvv">CVV<span>*</span></label>
-                    <input type="text" id="cvv" required>
+
+                <!-- AMBOS CAMPOS DENTRO DE LA MISMA FILA DE PAGO -->
+                <div class="f-fila-pago">
+                    <div>
+                        <label for="expiracion">expiración<span>*</span></label>
+                        <input type="text" id="expiracion" required>
+                    </div>
+                    <div>
+                        <label for="cvv">CVV<span>*</span></label>
+                        <input type="text" id="cvv" required>
+                    </div>
                 </div>
-            </div>
 
-            <div class="f-checkbox">
-                <input type="checkbox" id="terminos" required>
-                <label for="terminos">
-                    Acepto los <a href="#">términos y condiciones</a>, y consiento el uso de mis datos para los fines indicados en la <a href="#">política de privacidad</a> del organizador del evento.
-                </label>
-            </div>
+                <div class="f-checkbox">
+                    <input type="checkbox" id="terminos" required>
+                    <label for="terminos">
+                        Acepto los <a href="#">términos y condiciones</a>, y consiento el uso de mis datos para los fines indicados en la <a href="#">política de privacidad</a> del organizador del evento.
+                    </label>
+                </div>
 
-            <button type="submit">FINALIZAR COMPRA</button>
+                <button type="submit">FINALIZAR COMPRA</button>
             </div>
         </form>
+        
         <!-- marquesina -->
-       <div class="marquesina-contenedor-b">
+        <div class="marquesina-contenedor-b">
             <div class="marquesina-pista">
-                <div class="marquesina-bloque">
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                </div>
-                <div class="marquesina-bloque">
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                <span>LOWKEY</span>
-                </div>
+                    <div class="marquesina-bloque">
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                    </div>
+                    <div class="marquesina-bloque">
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                        <span>LOWKEY</span>
+                    </div>
             </div>
-        </div> 
+        </div>
 
         <!-- footer -->
          <footer>
@@ -208,7 +238,8 @@
                 <p class="footer-creditos">Diseñado por <span>mmmvvy</span></p>
             </div>
         </div>
-    </footer>
+        </footer>
+    </div>
   
 <!-- ICONOS -->
     <script src="https://unpkg.com/feather-icons"></script>
