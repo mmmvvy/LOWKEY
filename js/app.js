@@ -112,3 +112,11 @@ function cambiar() {
     document.querySelector('.f-total p').textContent = (n * 50.5) + '€';
     document.querySelector('.f-total p').textContent = (n * 50.5) + '€';
 }
+
+// cookies
+function cerrarCookies() {
+    const modal = document.getElementById('cookies-modal');
+    if (modal) {
+        modal.classList.add('oculto');
+    }
+}
