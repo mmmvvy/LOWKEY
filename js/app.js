@@ -75,6 +75,11 @@ if (botonesAnadir.length > 0 && globito) {
         boton.addEventListener('click', (e) => {
             e.preventDefault();
             
+            if (contadorCarrito >= 5) {
+                alert("Solo se pueden comprar hasta un máximo de 5 entradas.");
+                return;
+            }
+
             contadorCarrito++;
             globito.textContent = contadorCarrito;
             
@@ -86,17 +91,31 @@ if (botonesAnadir.length > 0 && globito) {
             setTimeout(() => {
                 globito.style.transform = 'scale(1)';
             }, 150);
+
+            const enlaceCarrito = document.querySelector('a[href*="carrito"]');
+            if (enlaceCarrito) {
+                enlaceCarrito.href = `carrito.html?cant=${contadorCarrito}`;
+            }
         });
     });
 }
 
+const urlParams = new URLSearchParams(window.location.search);
+let n = parseInt(urlParams.get('cant')) || 1;
 
-// SUMA Y RESTA FORMULARIO
-let n = 1;
+if (n > 5) n = 5;
+
+window.addEventListener('DOMContentLoaded', () => {
+    cambiar();
+});
 
 function sumar() {
-    n++;
-    cambiar();
+    if (n < 5) {
+        n++;
+        cambiar();
+    } else {
+        alert("Solo se pueden comprar hasta un máximo de 5 entradas.");
+    }
 }
 
 function restar() {
@@ -107,10 +126,13 @@ function restar() {
 }
 
 function cambiar() {
-    document.querySelector('.f-cant').textContent = n;
-    document.querySelector('.f-prod-subtotal').textContent = (n * 48.5) + '€';
-    document.querySelector('.f-total p').textContent = (n * 50.5) + '€';
-    document.querySelector('.f-total p').textContent = (n * 50.5) + '€';
+    const elCant = document.querySelector('.f-cant');
+    const elSubtotal = document.querySelector('.f-prod-subtotal');
+    const elTotal = document.querySelector('.f-total p');
+
+    if (elCant) elCant.textContent = n;
+    if (elSubtotal) elSubtotal.textContent = (n * 48.5).toFixed(2) + '€';
+    if (elTotal) elTotal.textContent = (n * 50.5).toFixed(2) + '€';
 }
 
 // cookies
@@ -119,4 +141,18 @@ function cerrarCookies() {
     if (modal) {
         modal.classList.add('oculto');
     }
+}
+
+// formulario 
+const formulario = document.querySelector('form');
+if (formulario) {
+    formulario.addEventListener('submit', function (e) {
+        const email = document.querySelector('input[type="email"]');
+        if (email) {
+            if (!email.value.includes('@') || !email.value.includes('.')) {
+                e.preventDefault();
+                alert('El correo electrónico debe contener un @ y un punto (ej: .com)');
+            }
+        }
+    });
 }
